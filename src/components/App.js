@@ -18,7 +18,7 @@ class App extends React.Component {
     store.dispatch(addMovies(data));
   }
   render(){
-    const movies=this.props.store.getState();
+    const {list}=this.props.store.getState();
     return (
       <div className="App">
         <NavBar/>
@@ -29,7 +29,7 @@ class App extends React.Component {
           </div>
 
           <div>
-            {movies.map((movie,key) => {
+            {list.map((movie,key) => {
               return(
               <MovieCard movie={movie} key={movie.id}/>
               )
