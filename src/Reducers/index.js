@@ -1,4 +1,4 @@
-import {combinereducers} from 'redux';
+import {combineReducers} from 'redux';
 
 import {ADD_MOVIES,ADD_TO_FAVORITES,REMOVE_FROM_FAVORITES,SET_SHOW_FAVORITES} from '../actions';
 
@@ -59,7 +59,7 @@ const initialRootState={
 	}
 }*/
 
-export default combinereducers({
+export default combineReducers({
 	movies: movies, //can use movies only in place of movies: movies, since both have same name
 	search: search
 });
